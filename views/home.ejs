@@ -1,0 +1,66 @@
+<!-- local css for body -->
+<link rel="stylesheet" type="text/css" href="../css/home.css" />
+<!-- local css for header -->
+<link rel="stylesheet" type="text/css" href="../css/header.css" />
+
+<!-- local css for body -->
+<link rel="stylesheet" type="text/css" href="../css/home.css" />
+
+<div class="row">
+  <div class="leftColumn">
+    <h1 id="title">Upload pdf File Here</h1>
+    <img src="../images/logo.png" alt="empty"  />
+
+
+    <div id="input">
+      <form
+        class="input-form"
+        action="/upload"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="file" id="csvFile" name="file" accept=".csv" />
+
+        <button type="submit" id="form-btn">Upload CSV</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="rightColumn">
+    <div class="pdf-display__width">
+      <ul class="pdf-list">
+        <% if(files.length==0) { %>
+          <div class="no-file">No files to show ☹️!</div>
+          <img src="../images/bored.png" alt="empty" style="height: 90%" />
+
+
+          <% } else { %> <% for(let file of files) { %>
+
+        <li class="grid-container">
+
+          <div class="pdf-lst grid-item">
+            <div class="pdf-list-item">
+              <div class="pdf-list-item-name"><%= file.fileName %></div>
+
+              <div class="actions">
+                <p style="padding: 15px">
+                  <%= file.createdAt.toLocaleTimeString() %> <%=
+                  file.createdAt.toLocaleDateString() %>
+                </p>
+
+                <a href="/view/<%= file.file %>">
+                  <i class="fa-solid fa-eye eye"></i>
+                </a>
+                <a href="/delete/<%= file.file %>">
+                  <i class="fa-solid fa-trash remove"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </li>
+        <% } %> <% } %>
+      </ul>
+    </div>
+  </div>
+</div>
