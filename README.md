@@ -22,6 +22,14 @@ This project is a web-based application designed to facilitate the uploading and
   ```
    ## Screenshots
 
+ ![Screenshot 1](https://github.com/ashish88pal/csvUploadCN/blob/f96dd66bf424a60ab828597ea3ccfb61f1de9e03/screenshots/ss1.png?raw=true)
+
+  ![Screenshot 2](https://github.com/ashish88pal/csvUploadCN/blob/f96dd66bf424a60ab828597ea3ccfb61f1de9e03/screenshots/ss2.png?raw=true)
+
+
+  ![Screenshot 3](https://github.com/ashish88pal/csvUploadCN/blob/f96dd66bf424a60ab828597ea3ccfb61f1de9e03/screenshots/ss3.png?raw=true)
+
+
 
 
 
